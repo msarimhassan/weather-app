@@ -90,13 +90,19 @@ const WeatherCard = ({ searchFunction, city, setCity, currentForecast }) => {
       {/* Temprature Description */}
       <div className="flex justify-center items-center">
         <div className="m-5 flex flex-col justify-center items-center">
-          <p className="text-grey text-[20px]">Humidity</p>
-          <p>{currentForecast?.humidity}</p>
+          {currentForecast?.humidity && (
+            <>
+              <p className="text-grey text-[20px]">Humidity</p>
+              <p>{currentForecast?.humidity}</p>
+            </>
+          )}
         </div>
         <div className="m-5 flex flex-col justify-center items-center">
-          <p className="text-grey  text-[20px]">Wind Speed</p>
           {currentForecast?.windSpeed && (
-            <p>{currentForecast?.windSpeed} km/h</p>
+            <>
+              <p className="text-grey  text-[20px]">Wind Speed</p>
+              <p>{currentForecast?.windSpeed} km/h</p>
+            </>
           )}
         </div>
       </div>
