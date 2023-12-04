@@ -4,5 +4,3 @@ import UnitToggleButton from './toggle/UnitToggleButton';
 import Loader from './loader';
 
 export { WeatherCard, WeekStats, UnitToggleButton, Loader };
-
-// export { default } from './cards/WeatherCard';
