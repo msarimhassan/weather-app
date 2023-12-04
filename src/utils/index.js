@@ -17,6 +17,11 @@ export const showErrorMessage = message => {
   return toast.error(message);
 };
 
+export const showWarningMessage = message => {
+  toast.dismiss();
+  return toast.warn(message);
+};
+
 export const getFahrenheitTemprature = celsiusTemperature => {
   const fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   return `${fahrenheitTemperature} °F`;

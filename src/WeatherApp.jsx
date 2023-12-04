@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { showErrorMessage } from './utils';
+import { showErrorMessage, showWarningMessage } from './utils';
 import { WeatherCard, WeekStats, UnitToggleButton } from './components';
 import { useLoader } from './hooks';
 
@@ -61,7 +61,7 @@ const WeatherApp = () => {
       error => {
         switch (error.code) {
           case error.PERMISSION_DENIED:
-            showErrorMessage('User denied the request for geolocation.');
+            showWarningMessage('User denied the request for geolocation.');
             setLoader(false);
             break;
         }
