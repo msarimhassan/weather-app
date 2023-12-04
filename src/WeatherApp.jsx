@@ -59,12 +59,8 @@ const WeatherApp = () => {
         setLatitude(position.coords.latitude);
       },
       error => {
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
-            showWarningMessage('User denied the request for geolocation.');
-            setLoader(false);
-            break;
-        }
+        showWarningMessage('User denied the request for geolocation.');
+        setLoader(false);
       }
     );
   };
