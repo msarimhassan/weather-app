@@ -16,10 +16,12 @@ const WeatherApp = () => {
   const getCityWeather = async (latitudeIncome, longitudeIncome) => {
     const api =
       city == ''
-        ? `https://api.openweathermap.org/data/2.5/forecast?lat=${latitudeIncome}&lon=${longitudeIncome}&appid=${
+        ? `${
+            import.meta.env.VITE_WEATHER_API_BASE_URL
+          }?lat=${latitudeIncome}&lon=${longitudeIncome}&appid=${
             import.meta.env.VITE_OPEN_WEATHER_API_KEY
           }&units=metric`
-        : `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${
+        : `${import.meta.env.VITE_WEATHER_API_BASE_URL}?q=${city}&appid=${
             import.meta.env.VITE_OPEN_WEATHER_API_KEY
           }&units=metric`;
 

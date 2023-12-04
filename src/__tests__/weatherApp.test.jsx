@@ -1,4 +1,4 @@
-import WeatherApp from '../src/WeatherApp';
+import WeatherApp from '../WeatherApp';
 import { describe, it, expect } from 'vitest';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
